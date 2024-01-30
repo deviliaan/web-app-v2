@@ -1,2 +1,18 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+    export let data;
+    type Anime = {
+        title: String;
+        episode: String;
+        year: String;
+        genres: String;
+        plot: String;
+        embed_url: String;
+        thumbnail: String;
+    }
+
+    const {animes}:any = data;
+</script>
+
+<div>
+    {JSON.stringify(animes)}
+</div>
